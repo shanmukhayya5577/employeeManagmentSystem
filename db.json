@@ -1,5 +1,13 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "fullName": "shanmuk",
+      "designation": "software",
+      "salary": "20000",
+      "age": "24",
+      "id": 1
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"
