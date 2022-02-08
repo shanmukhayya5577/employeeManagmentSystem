@@ -50,7 +50,7 @@
             
             <div class="form-group">
               <label for="exampleInputPassword1">Designation</label>
-              <input type="password" class="form-control" id="designation" formControlName="designation"
+              <input type="text" class="form-control" id="designation" formControlName="designation"
               [ngClass]="{'is-invalid':designation?.touched && designation?.errors,'is-valid':designation?.valid}">
             </div>
             <span style="color: red;"*ngIf="designation?.touched && employeeForm.controls['designation'].errors?.['required']">designation is required</span>
@@ -60,7 +60,7 @@
             
             <div class="form-group">
               <label for="exampleInputPassword1">Salary</label>
-              <input type="password" class="form-control" id="salary" formControlName="salary"
+              <input type="text" class="form-control" id="salary" formControlName="salary"
               [ngClass]="{'is-invalid':salary?.touched && salary?.errors,'is-valid':salary?.valid}">
             </div>
             <span style="color: red;"*ngIf="salary?.touched && employeeForm.controls['salary'].errors?.['required']">salary is required</span>
@@ -69,7 +69,7 @@
   
             <div class="form-group">
               <label for="exampleInputPassword1">Age</label>
-              <input type="password" class="form-control" id="age" formControlName="age"
+              <input type="text" class="form-control" id="age" formControlName="age"
               [ngClass]="{'is-invalid':age?.touched && age?.errors,'is-valid':age?.valid}">
             </div>
             <span style="color: red;"*ngIf="age?.touched && employeeForm.controls['age'].errors?.['required']">age is required</span>
