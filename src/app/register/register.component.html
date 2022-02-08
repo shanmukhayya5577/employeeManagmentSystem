@@ -1,0 +1,58 @@
+<div style="overflow-x: hidden;">
+    <div class="row">
+      <div class="col-4" style="background-color:rgb(66, 103, 178); ">
+      </div>
+      <div class="col-4" style="background-color:rgb(66, 103, 178); ">
+        <div class="container mt-3">
+          <h5 style="text-align: center;" class="text-white">Register your account</h5>
+          <div class="container bg-light text-left" style="border-radius: 2px; margin-bottom: 60px;">
+            <form [formGroup]="registerForm">
+              <div class="mt-2">
+                <label for="" class="mt-2">Name</label><br>
+                <input class="container form-control bg-light mt-1" type="text" formControlName="uname" name="uname" placeholder="Enter your name">
+                
+                <span style="font-size: smaller;" class="text-danger mt-1" *ngIf="uname.invalid && uname.touched">Enter your name
+                  using only character</span>
+              </div>
+              <div class="mt-1">
+                <label for="">User Name</label><br>
+                <input class="container form-control bg-light mt-1" type="text" formControlName="userN" name="userN" placeholder="Enter your user name">
+                
+                <span style="font-size: smaller;" class="text-danger" *ngIf="userN.invalid && userN.touched">Enter Username
+                  using only character and numbers</span>
+              </div>
+              <div class="mt-1">
+                <label for="">Email</label><br>
+                <input class="container form-control bg-light mt-2" type="text" formControlName="email" name="email" placeholder="Enter your email">
+                
+                <span style="font-size: smaller;" class="text-danger" *ngIf="email.invalid && email.touched">Enter your valid email</span>
+              </div>
+              <div class="mt-1">
+                <label for="">Password</label><br>
+                <input class="container form-control bg-light mt-2" type="password" formControlName="pass" name="pass" placeholder="Enter your password">
+                
+                <span style="font-size: smaller;" class="text-danger " *ngIf="pass.invalid && pass.touched">Enter correct
+                  password using atleast one(character,!@#$%,numbers,a-z &A-Z)</span>
+              </div>
+              <div class="mt-1">
+                <label for="">Confirm Pasword</label><br>
+                <input class="container form-control bg-light mt-2" type="password" formControlName="cpass" name="cpass" placeholder="Enter your confirm passowrd">
+                
+                <span style="font-size: smaller;" class="text-danger" *ngIf="(registerForm.value.pass!==registerForm.value.cpass)&&cpass.touched">Enter same
+                  passowrd as passowrd</span>
+              </div>
+  
+              <div class=" mt-4 container">
+                <button class="btn bg-success container text-white" (click)="signIn()"
+                  [disabled]="registerForm.invalid">Sign Up</button>
+              </div>
+              <div class="mt-3" style="text-align: center;padding-bottom:10px ; ">Already have an account <a href="">?
+                  Sign in.</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-4" style="background-color:rgb(66, 103, 178); ">
+      </div>
+    </div>
+  </div>
